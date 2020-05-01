@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: zhangfei
+    url: jdbc:mysql://localhost:3306/sell?useSSL=false&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
+  jpa:
+    show-sql: true
+  redis:
+    host: localhost
+    port: 6379
+  jackson:
+    data-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+server:
+  servlet:
+    context-path: /sell
+jwt:
+  header: Authorization
+  secret: mySecret
+  #token有效期一天
+  expiration: 86400
+  tokenHead: "Bearer "
